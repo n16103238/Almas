@@ -23,6 +23,8 @@
                 <th>Company</th>
                 <th>Effects</th>
                 <th>Expiry Date</th>
+                <th></th>
+                <th></th>
               </tr>
             </thead>
             <tbody class="text-center">
@@ -38,9 +40,15 @@
                 <td>{{$medicine->company}}</td>
                 <td>{{$medicine->effects}}</td>
                 <td>{{$medicine->expiry_date}}</td>
+                <td><a href="{{ route('update_medicine', $medicine->id)}}" class="btn btn-primary">Update</a></td>
+                <td>
+          <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                      Delete
+                      </button>
+                </td>
               </tr>
               @endforeach
-
             </tbody>
           </table>
         </div>
@@ -50,5 +58,28 @@
     </div>
 
   </div>
+    <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Medicine Delete</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="{{ route('delete.medicine', $medicine->id)}}" method="post">
+              @csrf
+            <div class="modal-body text-center text-danger">
+              Are you sure you want to Delete this?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button class="btn btn-danger" type="submit">Delete</button>
+            </div>
+            </form>
+          </div>
+          </div>
+          </div>
 </div>
 @endsection

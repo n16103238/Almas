@@ -6,7 +6,7 @@
             <h1>
             <header class="panel-heading">
                 <i class="fa fa-plus-circle"></i>
-                Add Category
+                Update Category
               </header></h2>
             <div class="">
                 <div class="adv-table editable-table ">

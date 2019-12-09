@@ -28,6 +28,7 @@
                 <td class="text-justify">{{$category->description}}</td>
                 <td><a href="{{ route('update_category', $category->id)}}" class="btn btn-primary">Update</a></td>
                 <td>
+                  <!-- Delete -->
                   <!-- Button trigger modal -->
                       <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
                       Delete
@@ -35,7 +36,6 @@
                 </td>
               </tr>
               @endforeach
-
             </tbody>
           </table>
         </div>

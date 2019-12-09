@@ -37,26 +37,27 @@ Route::group(['middleware'=>['auth']],function(){
 //Route::get('/dashboard/pharmacist_dashboard', 'DashboardController@pharmacist_dashboard')->name('pharmacist_dashboard');
 
 
-
-//Invoice
-Route::get('/invoice/add_invoice', 'InvoiceController@add_invoice')->name('add_invoice');
-Route::get('/invoice/view_invoice', 'InvoiceController@view_invoice')->name('view_invoice');
-
-
 //Medicine
 Route::get('/medicine_list', 'MedicineController@medicine_list')->name('medicine_list');
 Route::get('/add_medicine', 'MedicineController@add_medicine')->name('add_medicine');
 Route::post('/add_medicine', 'MedicineController@create_medicine')->name('create_medicine');
+//Medicine Update
+Route::get('/medicine/update/{id}', 'MedicineController@update_medicine')->name('update_medicine');
+Route::post('/update_medicine/{id}', 'MedicineController@update')->name('update.medicine');
+//Medicine Delete
+Route::post('/delete_medicine/{id}', 'MedicineController@delete')->name('delete.medicine');
+
+
 
 //Category
-Route::get('/medicine_category', 'MedicineController@medicine_category')->name('medicine_category');
-Route::get('/add_category', 'MedicineController@add_category')->name('add_category');
-Route::post('/create_category', 'MedicineController@create')->name('create_category');
+Route::get('/medicine_category', 'CategoryController@medicine_category')->name('medicine_category');
+Route::get('/add_category', 'CategoryController@add_category')->name('add_category');
+Route::post('/create_category', 'CategoryController@create')->name('create_category');
 //Category update
-Route::get('/category/update/{id}', 'MedicineController@update_category')->name('update_category');
-Route::post('/update_category/{id}', 'MedicineController@update')->name('update.category');
+Route::get('/category/update/{id}', 'CategoryController@update_category')->name('update_category');
+Route::post('/update_category/{id}', 'CategoryController@update')->name('update.category');
 //Category delete
-Route::post('/delete_category/{id}', 'MedicineController@delete')->name('delete.category');
+Route::post('/delete_category/{id}', 'CategoryController@delete')->name('delete.category');
 
 
 
@@ -78,3 +79,7 @@ Route::get('/report/add_prescription', 'PharmacistController@add_prescription')-
 //Pharmacist
 Route::get('/pharmacist/add_prescription', 'PharmacistController@add_prescription')->name('add_prescription');
 Route::get('/pharmacist/view_prescription', 'PharmacistController@view_prescription')->name('view_prescription');
+
+//Invoice
+Route::get('/invoice/add_invoice', 'InvoiceController@add_invoice')->name('add_invoice');
+Route::get('/invoice/view_invoice', 'InvoiceController@view_invoice')->name('view_invoice');
