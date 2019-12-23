@@ -61,7 +61,7 @@
                                       <input type="date" class="form-control" name="expiry_date" value="{{$med->expiry_date}}">
                                   </div>
 
-                                    <button type="submit" name="submit" class="btn btn-info"> Submit</button>
+                                    <button type="submit" name="submit" class="btn btn-info"> Update</button>
                                   </form>
                             </div>
                           </div>

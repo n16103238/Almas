@@ -32,12 +32,12 @@ class MedicineController extends Controller
 
           public function medicine_list()
           {
-          
+
             $medicines = Medicines::all();
               return view('admin.medicine.medicine_list',compact('medicines'));
           }
 
-        //Category update
+        //Medicine update
         public function update_medicine($id){
           $categories = Category::all();
                     $med = Medicines::findOrFail($id);

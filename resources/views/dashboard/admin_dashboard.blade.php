@@ -129,6 +129,12 @@
         <a class="nav-link" href=""><i class="fas fa-fw fa-hourglass-half"></i>
           <span>Stock</span></a>
       </li>
+<!-- Staff -->
+<li class="nav-item">
+  <a class="nav-link" href=""><i class="fas fa-fw fa-users"></i>
+    <span>Staff</span></a>
+</li>
+
 <!-- All Sales -->
       <li class="nav-item">
         <a class="nav-link" href=""><i class="fas fa-fw fa-cart-plus"></i>
@@ -196,7 +202,7 @@
       <footer class="sticky-footer">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright N ©  2019</span>
+            <span>Copyright Nahid Hasan Id:16103238 © 2019</span>
           </div>
         </div>
       </footer>

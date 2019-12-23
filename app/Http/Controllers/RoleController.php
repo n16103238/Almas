@@ -13,7 +13,8 @@ class RoleController extends Controller
   public function role_list()
       {
         $roles = Role::all();
-          return view('admin.user.role_list',compact('roles'));
+        //dd($roles);
+        return view('admin.user.role_list',compact('roles'));
       }
 
 
@@ -29,6 +30,26 @@ class RoleController extends Controller
              ]);
              return back()->with('success','Role added sucessfully');
           }
+          //Role update
+          public function update_role($id){
+                      $role = Role::findOrFail($id);
 
+            return view('admin.user.role_update',compact('role'));
+          }
+
+          function update(Request $request,$id) {
+            Role::findOrFail($id)->update([
+              'name' =>$request-> name,
+
+                         ]);
+             return redirect()->route('role_list')->with('success','Role Updated Sucessfully');
+          }
+
+          //delete
+          public function delete($id)
+          {
+              Role::findOrFail($id)->delete();
+              return back()->with('success','Role Deleted Successfully.');
+          }
 
 }

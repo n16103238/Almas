@@ -25,7 +25,7 @@
                                             <textarea class="form-control" name="description"> {{$cat->description}}</textarea>
                                         </div>
 
-                                        <button type="submit" name="submit" class="btn btn-info"> Submit</button>
+                                        <button type="submit" name="submit" class="btn btn-info"> Update</button>
                                       </form>
                                 </div>
                             </section>

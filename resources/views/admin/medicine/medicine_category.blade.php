@@ -39,11 +39,8 @@
             </tbody>
           </table>
         </div>
-
       </div>
-
     </div>
-
   </div>
 
   <!-- Modal -->
@@ -59,7 +56,7 @@
     <form action="{{ route('delete.category', $category->id)}}" method="post">
       @csrf
     <div class="modal-body text-center text-danger">
-      Are you sure you want to Delete this?
+      Do You Want to Delete?
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

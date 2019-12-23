@@ -78,12 +78,15 @@
 <li class="nav-item dropdown">
   <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <i class="fas fa-fw fa-folder"></i>
-    <span>Prescription</span>
+    <span>Expenses</span>
   </a>
   <div class="dropdown-menu" aria-labelledby="pagesDropdown">
     <a class="dropdown-item" href=""><i class="fas fa-fw fa-plus-circle"></i>
-      <span>Add Prescription</span></a>
-    <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i><span>View Prescription list</span></a>
+      <span>Add Expenses</span></a>
+    <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i>
+      <span>Expense list</span></a>
+      <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i>
+        <span>Expense Category</span></a>
   </div>
 </li>
 <!-- Medicine List -->
@@ -96,7 +99,7 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-fw fa-folder"></i>
-          <span>Invoice</span>
+          <span>Stock</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
           <a class="dropdown-item" href=""><i class="fas fa-fw fa-plus-circle"></i>
@@ -112,21 +115,39 @@
                 <span>All Sales</span></a>
             </li>
 
+      <!-- Report -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-fw fas fa-chart-line"></i>
+                <span>Report</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i>
+                  <span>Sales Report</span></a>
+                <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i>
+                  <span>Purchase Report</span></a>
+                <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i>
+                  <span>Profit/Loss</span></a>
+              </div>
+            </li>
+    <!-- Profile -->
+
+                <li class="nav-item">
+                  <a class="nav-link" href=""><i class="fas fa-fw fa-user-tie"></i>
+                    <span>Profile</span></a>
+                </li>
+
     </ul>
 <!-- Sidebar end -->
 
-
-
-  <div id="content-wrapper">
-
+<div id="content-wrapper">
 
       <div class="container-fluid">
-
       <!--  Footer -->
       <footer class="sticky-footer">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright N ©  2019</span>
+            <span>Copyright Nahid Hasan Id:16103238 © 2019</span>
           </div>
         </div>
       </footer>
