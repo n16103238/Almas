@@ -43,7 +43,7 @@
                 <td><a href="{{ route('update_medicine', $medicine->id)}}" class="btn btn-primary">Update</a></td>
                 <td>
           <!-- Button trigger modal -->
-                      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                      <button type="button" class="btn btn-danger" onclick="dd('{{$medicine->id}}')" data-toggle="modal" data-target="#exampleModal">
                       Delete
                       </button>
                 </td>
@@ -68,9 +68,10 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="{{ route('delete.medicine', $medicine->id)}}" method="post">
+            <form action="{{ route('delete.medicine')}}" method="post">
               @csrf
-            <div class="modal-body text-center text-danger">
+              <input type="hidden" name="id" id='delete_id'>
+              <div class="modal-body text-center text-danger">
               Are you sure you want to Delete this?
             </div>
             <div class="modal-footer">
@@ -82,4 +83,10 @@
           </div>
           </div>
 </div>
+<script type="text/javascript">
+function dd(id)
+{
+  document.getElementById("delete_id").value = id;
+}
+</script>
 @endsection

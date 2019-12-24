@@ -30,7 +30,7 @@
                 <td>
                   <!-- Delete -->
                   <!-- Button trigger modal -->
-                      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                      <button type="button" onclick="dd('{{$role->id}}')" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
                       Delete
                       </button>
                 </td>
@@ -52,9 +52,10 @@
           <span aria-hidden="true">&times;</span>
         </button>
     </div>
-    <form action="{{ route('delete.role', $role->id)}}" method="post">
+    <form action="{{ route('delete.role')}}" method="post">
       @csrf
-    <div class="modal-body text-center text-danger">
+      <input type="hidden" name="id" id='delete_id'>
+          <div class="modal-body text-center text-danger">
       Do You Want to Delete?
     </div>
     <div class="modal-footer">
@@ -66,5 +67,10 @@
   </div>
   </div>
 </div>
-
+<script type="text/javascript">
+function dd(id)
+{
+  document.getElementById("delete_id").value = id;
+}
+</script>
 @endsection

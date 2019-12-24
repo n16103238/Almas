@@ -61,9 +61,9 @@ class MedicineController extends Controller
         }
 
         //delete
-        public function delete($id)
+        public function delete(Request $request)
         {
-            Medicines::findOrFail($id)->delete();
+            Medicines::findOrFail($request->id)->delete();
             return back()->with('success','Medicine Deleted Successfully.');
         }
 

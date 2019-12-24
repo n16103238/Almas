@@ -2,18 +2,17 @@
 
 @section('content')
 <!-- page start-->
-        <section class="panel">
-            <h1>
-            <header class="panel-heading">
-                <i class="fa fa-plus-circle"></i>
-                Add Category
-              </header></h2>
-            <div class="">
-                <div class="adv-table editable-table ">
-                    <div class="clearfix">
-                        <div class="col-md-6">
-                            <section class="panel">
-                                <div class="panel-body">
+<div class="container">
+            <div class="col-md-6">
+
+              <div class="card">
+                <div class="card-header text-center">
+                  <h2>
+                      <i class="fa fa-plus-circle"></i>
+                      Add Medicine
+                  </h2>
+                </div>
+                <div class="card-body">
                                   <form  action="{{ route('create_category') }}" method="POST">
                                       @csrf
                                         <div class="form-group">
@@ -29,11 +28,9 @@
                                         <button type="submit" name="submit" class="btn btn-info"> Submit</button>
                                       </form>
                                 </div>
-                            </section>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+
         <!-- page end-->
 @endsection

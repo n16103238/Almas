@@ -23,8 +23,11 @@
                                     <div class="form-group">
                                         <label>Category</label>
                                         <select class="form-control" width="50%" name="category_id" value="{{$med->category_id}}" id="sel1">
+                                          <option value="{{$med ->categories -> id}}" selected>{{$med ->categories -> name}}</option>
                                       @foreach($categories as $category)
+                                      @if($category -> id != $med ->categories -> id)
                                       <option value="{{$category -> id}}">{{$category -> name}}</option>
+                                      @endif
                                       @endforeach
                                     </select>
 

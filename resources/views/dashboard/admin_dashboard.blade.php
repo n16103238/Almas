@@ -102,7 +102,6 @@
                 <span>Medicine List</span></a>
               <a class="dropdown-item" href="{{route('add_medicine')}}"><i class="fas fa-fw fa-medkit"></i>
                 <span>Add Medicine</span></a>
-
             </div>
           </li>
       <!-- Medicine end -->
@@ -131,7 +130,7 @@
       </li>
 <!-- Staff -->
 <li class="nav-item">
-  <a class="nav-link" href=""><i class="fas fa-fw fa-users"></i>
+  <a class="nav-link" href="{{route('staff_list')}}"><i class="fas fa-fw fa-users"></i>
     <span>Staff</span></a>
 </li>
 
@@ -160,7 +159,7 @@
   <!-- Profile -->
 
       <li class="nav-item">
-        <a class="nav-link" href=""><i class="fas fa-fw fa-user-tie"></i>
+        <a class="nav-link" href="{{route('profile_information')}}"><i class="fas fa-fw fa-user-tie"></i>
           <span>Profile</span></a>
       </li>
 

@@ -45,9 +45,9 @@ class CategoryController extends Controller
           }
 
           //delete
-          public function delete($id)
+          public function delete(Request $request)
           {
-              Category::findOrFail($id)->delete();
+              Category::findOrFail($request -> id)->delete();
               return back()->with('success','Category Deleted successfully.');
           }
 

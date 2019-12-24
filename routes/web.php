@@ -45,7 +45,7 @@ Route::post('/add_medicine', 'MedicineController@create_medicine')->name('create
 Route::get('/medicine/update/{id}', 'MedicineController@update_medicine')->name('update_medicine');
 Route::post('/update_medicine/{id}', 'MedicineController@update')->name('update.medicine');
 //Medicine Delete
-Route::post('/delete_medicine/{id}', 'MedicineController@delete')->name('delete.medicine');
+Route::post('/delete_medicine', 'MedicineController@delete')->name('delete.medicine');
 
 
 
@@ -57,7 +57,7 @@ Route::post('/create_category', 'CategoryController@create')->name('create_categ
 Route::get('/category/update/{id}', 'CategoryController@update_category')->name('update_category');
 Route::post('/update_category/{id}', 'CategoryController@update')->name('update.category');
 //Category delete
-Route::post('/delete_category/{id}', 'CategoryController@delete')->name('delete.category');
+Route::post('/delete_category', 'CategoryController@delete')->name('delete.category');
 
 //Role
 Route::get('/role_list', 'RoleController@role_list')->name('role_list');
@@ -67,12 +67,47 @@ Route::post('/add_role', 'RoleController@create_role')->name('create_role');
 Route::get('/role/update/{id}', 'RoleController@update_role')->name('update_role');
 Route::post('/update_role/{id}', 'RoleController@update')->name('update.role');
 //Role delete
-Route::post('/delete_role/{id}', 'RoleController@delete')->name('delete.role');
+Route::post('/delete_role', 'RoleController@delete')->name('delete.role');
 
 //Users
 Route::get('/user_list', 'UserController@user_list')->name('user_list');
 Route::get('/user_update/{user}', 'UserController@user_update')->name('user_update');
 Route::post('/user_update/{user}', 'UserController@update')->name('update');
+
+//Staff
+Route::get('/staff_list', 'StaffController@staff_list')->name('staff_list');
+Route::get('/add_staff', 'StaffController@add_staff')->name('add_staff');
+Route::post('/create_staff', 'StaffController@create')->name('create_staff');
+//Staff update
+Route::get('/staff/update/{id}', 'StaffController@update_staff')->name('update_staff');
+Route::post('/update_staff/{id}', 'StaffController@update')->name('update.staff');
+//Staff delete
+Route::post('/delete_staff', 'StaffController@delete')->name('delete.staff');
+
+
+//Report
+Route::get('/report', 'PharmacistController@add_prescription')->name('add_prescription');
+
+//Profiles
+Route::get('/profile', 'ProfileController@index')->name('profile_information');
+Route::post('/profile', 'ProfileController@add_information')->name('add_information');
+//Profile Update
+Route::post('/update_profile', 'ProfileController@update_information')->name('update_information');
+
+
+//Pharmacist Dashboard
+//POS
+
+
+//Expenses
+Route::get('/expense_list', 'ExpenseController@expense_list')->name('expense_list');
+Route::get('/add_expense', 'ExpenseController@add_expense')->name('add_expense');
+Route::post('/create_expense', 'ExpenseController@create')->name('create_expense');
+//Expenses update
+Route::get('/expense/update/{id}', 'ExpenseController@update_expense')->name('update_expense');
+Route::post('/update_expense/{id}', 'ExpenseController@update')->name('update.expense');
+//Expenses delete
+Route::post('/delete_expense', 'ExpenseController@delete')->name('delete.expense');
 
 //Stock
 Route::get('/stock', 'StockController@stock')->name('stock');
@@ -80,14 +115,7 @@ Route::get('/stock', 'StockController@stock')->name('stock');
 Route::get('/stock/update/{id}', 'StockController@update_stock')->name('update_stock');
 Route::post('/update_stock/{id}', 'StockController@update')->name('update.stock');
 //Stock delete
-Route::post('/delete_stock/{id}', 'StockController@delete')->name('delete.stock');
-
-//Report
-Route::get('/report/add_prescription', 'PharmacistController@add_prescription')->name('add_prescription');
-
-//Pharmacist
-Route::get('/pharmacist/add_prescription', 'PharmacistController@add_prescription')->name('add_prescription');
-Route::get('/pharmacist/view_prescription', 'PharmacistController@view_prescription')->name('view_prescription');
+Route::post('/delete_stock', 'StockController@delete')->name('delete.stock');
 
 //Invoice
 Route::get('/invoice/add_invoice', 'InvoiceController@add_invoice')->name('add_invoice');

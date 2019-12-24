@@ -91,8 +91,7 @@
 </li>
 <!-- Medicine List -->
       <li class="nav-item">
-        <a class="nav-link" href="charts.html"><i class="fas fa-fw fa-chart-area"></i><span>Medicine List</span></a>
-
+        <a class="nav-link" href="{{route('medicine_list')}}"><i class="fas fa-fw fa-chart-area"></i><span>Medicine List</span></a>
       </li>
 
   <!-- Invoice -->
@@ -143,6 +142,27 @@
 <div id="content-wrapper">
 
       <div class="container-fluid">
+        <div class="container">
+          @if(session()->get('success'))
+            <div class="alert alert-success">
+              {{ session()->get('success') }}
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <br />
+          @endif
+          @if(session()->get('warning'))
+            <div class="alert alert-danger">
+              {{ session()->get('warning') }}
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <br />
+          @endif
+            @yield('content')
+        </div>
       <!--  Footer -->
       <footer class="sticky-footer">
         <div class="container my-auto">

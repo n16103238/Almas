@@ -46,9 +46,9 @@ class RoleController extends Controller
           }
 
           //delete
-          public function delete($id)
+          public function delete(Request $request)
           {
-              Role::findOrFail($id)->delete();
+              Role::findOrFail($request->id)->delete();
               return back()->with('success','Role Deleted Successfully.');
           }
 

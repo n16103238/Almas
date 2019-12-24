@@ -12,6 +12,6 @@ class StockController extends Controller
       {
         $roles = Role::all();
         //dd($roles);
-        return view('admin.stock.stock',compact('medicines'));
+        return view('pharmacist.stock.stock',compact('medicines'));
       }
 }
