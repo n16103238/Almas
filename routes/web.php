@@ -97,6 +97,15 @@ Route::post('/update_profile', 'ProfileController@update_information')->name('up
 
 //Pharmacist Dashboard
 //POS
+//sales
+Route::get('/sales', 'SalesController@sales')->name('sales');
+Route::post('/add_sales', 'SalesController@add_sales')->name('add_sales');
+
+//sales details
+Route::get('/sales_details', 'SalesController@sales_details')->name('sales_details');
+Route::post('/add_sales_details', 'SalesController@add_sales_details')->name('add_sales_details');
+Route::get('/sales_confirm/{id}', 'SalesController@confirm')->name('confirm');
+
 
 
 //Expenses
@@ -111,11 +120,9 @@ Route::post('/delete_expense', 'ExpenseController@delete')->name('delete.expense
 
 //Stock
 Route::get('/stock', 'StockController@stock')->name('stock');
-//Stock Update
-Route::get('/stock/update/{id}', 'StockController@update_stock')->name('update_stock');
-Route::post('/update_stock/{id}', 'StockController@update')->name('update.stock');
-//Stock delete
-Route::post('/delete_stock', 'StockController@delete')->name('delete.stock');
+Route::get('/add_stock', 'StockController@add_stock')->name('add_stock');
+Route::post('/create_stock', 'StockController@create')->name('create_stock');
+
 
 //Invoice
 Route::get('/invoice/add_invoice', 'InvoiceController@add_invoice')->name('add_invoice');

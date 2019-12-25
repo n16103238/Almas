@@ -21,7 +21,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Phone Number</label>
-                                            <input type="text" class="form-control" placeholder="01......" maxlength="11"
+                                            <input type="number" class="form-control" placeholder="01......" maxlength="11"
                                              name="phone" >
                                         </div>
                                         <div class="form-group">

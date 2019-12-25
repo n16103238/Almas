@@ -1,4 +1,4 @@
-@extends('dashboard.pharmacist_dashboard')
+@extends('Dashboard.pharmacist_dashboard')
 
 @section('content')
 <!-- page start-->
@@ -9,30 +9,27 @@
                 <div class="card-header text-center">
                   <h2>
                       <i class="fa fa-plus-circle"></i>
-                      Add Stock
+                      Add Sales
                   </h2>
                 </div>
                 <div class="card-body">
-                                  <form  action="{{ route('create_stock') }}" method="POST">
+                                  <form  action="{{ route('add_sales') }}" method="POST">
                                       @csrf
                                         <div class="form-group">
-
-                                            <label for="exampleInputEmail1">Name</label>
-                                            <select class="form-control" width="50%" name="id" id="sel1">
-                                          @foreach($medicines as $medicine)
-                                          <option value="{{$medicine -> id}}">{{$medicine -> name}}</option>
-                                          @endforeach
-                                        </select>
+                                            <label for="exampleInputEmail1">Customer Name</label>
+                                            <input type="text" class="form-control" name="customer_name" >
                                         </div>
                                         <div class="form-group">
-                                            <label>Quantity</label>
-                                            <input type="number" min=0  class="form-control" name="quantity">
+                                            <label for="exampleInputEmail1">Phone Number</label>
+                                            <input type="number" maxlength="11" class="form-control" name="phone" placeholder="01.........">
                                         </div>
-
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Age</label>
+                                            <input type="number" min="15" class="form-control" name="age" >
+                                        </div>
                                         <button type="submit" name="submit" class="btn btn-info"> Submit</button>
                                       </form>
                                 </div>
-
                         </div>
                     </div>
                 </div>

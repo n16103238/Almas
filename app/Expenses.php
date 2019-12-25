@@ -8,15 +8,6 @@ class Expenses extends Model
 {
   protected $fillable = [
        'name',
-       'phone',
-       'position',
-       'salary',
-       'gender',
-       'address',
-
+       'amount',
    ];
-   function expenses()
-    {
-      return $this->hasOne('App\Expenses','id','user_id');
-    }
 }

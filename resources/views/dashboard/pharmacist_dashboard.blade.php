@@ -23,7 +23,7 @@
       <i class="fas fa-bars"></i>
     </button>
 
-    <!-- Navbar Search -->
+    <!-- Navbar Search
     <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
@@ -34,11 +34,11 @@
         </div>
       </div>
     </form>
-    <!-- Navbar Search end -->
+     Navbar Search end -->
 
 
     <!-- Navbar -->
-    <ul class="navbar-nav ml-auto ml-md-0">
+    <ul class="navbar-nav ml-auto ml-md-100">
 
       <li class="nav-item dropdown">
           <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -69,11 +69,11 @@
 
 <!-- POS -->
       <li class="nav-item">
-        <a class="nav-link" href=""><i class="far fa-money-bill-alt"></i>
+        <a class="nav-link" href="{{route('sales')}}"><i class="far fa-money-bill-alt"></i>
           <span>POS</span></a>
       </li>
 
-<!-- Prescription -->
+<!-- Expenses -->
 
 <li class="nav-item dropdown">
   <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -89,24 +89,11 @@
         <span>Expense Category</span></a>
   </div>
 </li>
-<!-- Medicine List -->
-      <li class="nav-item">
-        <a class="nav-link" href="{{route('medicine_list')}}"><i class="fas fa-fw fa-chart-area"></i><span>Medicine List</span></a>
-      </li>
 
-  <!-- Invoice -->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Stock</span>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <a class="dropdown-item" href=""><i class="fas fa-fw fa-plus-circle"></i>
-            <span>Add Invoice</span></a>
-          <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i>
-            <span>View Invoice</span></a>
-        </div>
-      </li>
+  <!-- Stock -->
+  <li class="nav-item">
+    <a class="nav-link" href="{{route('stock')}}"><i class="fas fa-fw fa-chart-area"></i><span>Stock</span></a>
+  </li>
 
       <!-- All Sales -->
             <li class="nav-item">
