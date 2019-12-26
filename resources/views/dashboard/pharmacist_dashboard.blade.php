@@ -81,13 +81,11 @@
     <span>Expenses</span>
   </a>
   <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-    <a class="dropdown-item" href=""><i class="fas fa-fw fa-plus-circle"></i>
+    <a class="dropdown-item" href="{{route('add_expense')}}"><i class="fas fa-fw fa-plus-circle"></i>
       <span>Add Expenses</span></a>
-    <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i>
+    <a class="dropdown-item" href="{{route('expense_list')}}"><i class="fas fa-fw fa-folder"></i>
       <span>Expense list</span></a>
-      <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i>
-        <span>Expense Category</span></a>
-  </div>
+        </div>
 </li>
 
   <!-- Stock -->
@@ -119,7 +117,7 @@
     <!-- Profile -->
 
                 <li class="nav-item">
-                  <a class="nav-link" href=""><i class="fas fa-fw fa-user-tie"></i>
+                  <a class="nav-link" href="{{route('profile_information')}}"><i class="fas fa-fw fa-user-tie"></i>
                     <span>Profile</span></a>
                 </li>
 

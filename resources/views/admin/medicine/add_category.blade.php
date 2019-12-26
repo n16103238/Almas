@@ -9,7 +9,7 @@
                 <div class="card-header text-center">
                   <h2>
                       <i class="fa fa-plus-circle"></i>
-                      Add Medicine
+                      Add Category
                   </h2>
                 </div>
                 <div class="card-body">

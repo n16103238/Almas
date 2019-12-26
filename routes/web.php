@@ -86,7 +86,10 @@ Route::post('/delete_staff', 'StaffController@delete')->name('delete.staff');
 
 
 //Report
-Route::get('/report', 'PharmacistController@add_prescription')->name('add_prescription');
+Route::get('/reports', 'ReportController@reports')->name('reports');
+Route::get('/add_reports', 'ReportController@add_reports')->name('add_reports');
+Route::post('/create_reports', 'ReportController@create_reports')->name('create_reports');
+
 
 //Profiles
 Route::get('/profile', 'ProfileController@index')->name('profile_information');
@@ -95,23 +98,20 @@ Route::post('/profile', 'ProfileController@add_information')->name('add_informat
 Route::post('/update_profile', 'ProfileController@update_information')->name('update_information');
 
 
-//Pharmacist Dashboard
-//POS
-//sales
+//***********Pharmacist Dashboard***********
+//POS sales
 Route::get('/sales', 'SalesController@sales')->name('sales');
 Route::post('/add_sales', 'SalesController@add_sales')->name('add_sales');
-
-//sales details
+//pos sales details
 Route::get('/sales_details', 'SalesController@sales_details')->name('sales_details');
 Route::post('/add_sales_details', 'SalesController@add_sales_details')->name('add_sales_details');
 Route::get('/sales_confirm/{id}', 'SalesController@confirm')->name('confirm');
 
 
-
 //Expenses
 Route::get('/expense_list', 'ExpenseController@expense_list')->name('expense_list');
 Route::get('/add_expense', 'ExpenseController@add_expense')->name('add_expense');
-Route::post('/create_expense', 'ExpenseController@create')->name('create_expense');
+Route::post('/create_expense', 'ExpenseController@create_expense')->name('create_expense');
 //Expenses update
 Route::get('/expense/update/{id}', 'ExpenseController@update_expense')->name('update_expense');
 Route::post('/update_expense/{id}', 'ExpenseController@update')->name('update.expense');
@@ -122,8 +122,3 @@ Route::post('/delete_expense', 'ExpenseController@delete')->name('delete.expense
 Route::get('/stock', 'StockController@stock')->name('stock');
 Route::get('/add_stock', 'StockController@add_stock')->name('add_stock');
 Route::post('/create_stock', 'StockController@create')->name('create_stock');
-
-
-//Invoice
-Route::get('/invoice/add_invoice', 'InvoiceController@add_invoice')->name('add_invoice');
-Route::get('/invoice/view_invoice', 'InvoiceController@view_invoice')->name('view_invoice');

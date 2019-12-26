@@ -54,7 +54,7 @@ public function add_sales_details(Request $request)
   $pquantity = $medicine -> quantity;
   $nquantity = $pquantity - $request -> quantity;
 
-
+        if($nquantity>=0){
           SalesDetails::insert([
              'sale_id' =>$request-> sale_id,
              'medicine_id' =>$request-> medicine_id,
@@ -67,7 +67,13 @@ public function add_sales_details(Request $request)
           Medicines::where('id', $request -> medicine_id)->update([
             'quantity' => $nquantity,
           ]);
-          return back()->with('id',$request-> sale_id);
+return back()->with('id',$request-> sale_id);
+        }
+        else{
+          return back()->with('id',$request-> sale_id)->with('warning','Medicine not available');
+        }
+
+
 }
 public function confirm($id)
     {

@@ -3,66 +3,53 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Expenses;
 class ExpenseController extends Controller
 {
-  public function add_medicine()
+  public function add_expense()
   {
-    $categories = Category::all();
-      return view('admin.medicine.add_medicine',compact('categories'));
+    $expenses = Expenses::all();
+      return view('pharmacist.expenses.add_expense',compact('expenses'));
   }
-//Add Medicine
-public function create_medicine(Request $request)
+//Add Expenses
+public function create_expense(Request $request)
 {
-        Medicines::create([
+        Expenses::create([
            'name' =>$request-> name,
-           'category_id' =>$request-> category_id,
-           'purchase_price' =>$request-> purchase_price,
-           'selling_price' =>$request-> selling_price,
-           'quantity' =>$request-> quantity,
-           'generic_name' =>$request-> generic_name,
-           'company' =>$request-> company,
-           'effects' =>$request-> effects,
-           'expiry_date' =>$request-> expiry_date,
+           'amount' =>$request-> amount,
+
         ]);
-  return back()->with('success','Medicine Added Sucessfully');
+  return back()->with('success','Expense Added Sucessfully');
 }
 
-  public function medicine_list()
+  public function expense_list()
   {
 
-    $medicines = Medicines::all();
-      return view('admin.medicine.medicine_list',compact('medicines'));
+    $expenses = Expenses::all();
+      return view('pharmacist.expenses.expenses',compact('expenses'));
   }
 
-//Medicine update
-public function update_medicine($id){
-  $categories = Category::all();
-            $med = Medicines::findOrFail($id);
+//Expense update
+public function update_expense($id){
+  //$categories = Category::all();
+            $exp = Expenses::findOrFail($id);
 //  dd($cat);
-  return view('admin.medicine.medicine_update',compact('med', 'categories'));
+  return view('pharmacist.expenses.update_expense',compact('exp'));
 }
 
 function update(Request $request,$id) {
-  Medicines::findOrFail($id)->update([
+  Expenses::findOrFail($id)->update([
     'name' =>$request-> name,
-    'category_id' =>$request-> category_id,
-    'purchase_price' =>$request-> purchase_price,
-    'selling_price' =>$request-> selling_price,
-    'quantity' =>$request-> quantity,
-    'generic_name' =>$request-> generic_name,
-    'company' =>$request-> company,
-    'effects' =>$request-> effects,
-    'expiry_date' =>$request-> expiry_date,
+    'amount' =>$request-> amount,
    ]);
-   return redirect()->route('medicine_list')->with('success','Medicine Updated Sucessfully');
+   return redirect()->route('expense_list')->with('success','Expense Updated Sucessfully');
 }
 
 //delete
 public function delete(Request $request)
 {
-    Medicines::findOrFail($request->id)->delete();
-    return back()->with('success','Medicine Deleted Successfully.');
+    Expenses::findOrFail($request->id)->delete();
+    return back()->with('success','Expense Deleted Successfully.');
 }
 
 }

@@ -29,6 +29,7 @@
             <tbody class="text-center">
 
               @foreach($medicines as $medicine)
+              @if($medicine->quantity != 0)
               <tr>
                 <td>{{$medicine->name}}</td>
                 <td>{{$medicine->categories->name}}</td>
@@ -39,6 +40,19 @@
                 <td>{{$medicine->effects}}</td>
                 <td>{{$medicine->expiry_date}}</td>
               </tr>
+              @else
+              <tr class="bg-danger text-light">
+                <td>{{$medicine->name}}</td>
+                <td>{{$medicine->categories->name}}</td>
+                <td>{{$medicine->selling_price}}</td>
+                <td>{{$medicine->quantity}}</td>
+                <td>{{$medicine->generic_name}}</td>
+                <td>{{$medicine->company}}</td>
+                <td>{{$medicine->effects}}</td>
+                <td>{{$medicine->expiry_date}}</td>
+              </tr>
+              @endif
+
               @endforeach
             </tbody>
           </table>
