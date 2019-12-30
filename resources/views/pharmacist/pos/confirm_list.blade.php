@@ -6,11 +6,11 @@
   <div class="row">
     <div class="col-auto">
 
-      <div class="card">
+      <div class="card" id="toPrint">
         <div class="card-header text-center">
           <h4>Invoice</h4>
         </div>
-        <div class="card-body">
+        <div class="card-body" id="toPrint">
           <center><h5><b>Sanaz Pharmacy</b></h5></center>
           <div class="form-group d-flex">
               <label>Order Number: {{$order ->id}}<label>
@@ -48,11 +48,25 @@
               </tr>
             </tbody>
           </table>
+
+
         </div>
+        <button type="button" onclick="print.printTable()" class="btn btn-primary">Print</button>
 
       </div>
 
     </div>
 
   </div>
+  <script type="text/javascript">
+  var print = new function () {
+           this.printTable = function () {
+               var tab = document.getElementById('toPrint');
+               var win = window.open('', '', 'height=700,width=700');
+               win.document.write(tab.outerHTML);
+               win.document.close();
+               win.print();
+           }
+       }
+  </script>
 @endsection

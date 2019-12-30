@@ -16,7 +16,7 @@
               <tr>
                 <th>Name</th>
                 <th>Amount</th>
-                <th>Date & Time</th>
+                <th>Date</th>
                 <th></th>
                 <th></th>
               </tr>

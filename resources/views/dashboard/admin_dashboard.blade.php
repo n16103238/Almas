@@ -15,8 +15,6 @@
   <link href="{{ asset('dashboard/css/admin.css') }}" rel="stylesheet">
   <link href="{{ asset('css/form-snippet.css') }}" rel="stylesheet">
 
-
-
 </head>
 
 <body id="page-top">
@@ -122,23 +120,13 @@
       <!-- Medicine Category end -->
 
 
-<!-- Stock -->
-
-      <li class="nav-item">
-        <a class="nav-link" href=""><i class="fas fa-fw fa-hourglass-half"></i>
-          <span>Stock</span></a>
-      </li>
 <!-- Staff -->
 <li class="nav-item">
   <a class="nav-link" href="{{route('staff_list')}}"><i class="fas fa-fw fa-users"></i>
     <span>Staff</span></a>
 </li>
 
-<!-- All Sales -->
-      <li class="nav-item">
-        <a class="nav-link" href=""><i class="fas fa-fw fa-cart-plus"></i>
-          <span>All Sales</span></a>
-      </li>
+
 
 <!-- Report -->
       <li class="nav-item dropdown">
@@ -147,12 +135,12 @@
           <span>Report</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-          <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i>
+          <a class="dropdown-item" href="{{route('add_reports')}}"><i class="fas fa-fw fa-folder"></i>
             <span>Sales Report</span></a>
-          <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i>
-            <span>Purchase Report</span></a>
-          <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i>
-            <span>Profit/Loss</span></a>
+          <a class="dropdown-item" href="{{route('add_reports_details')}}"><i class="fas fa-fw fa-folder"></i>
+            <span>Sales Details Report</span></a>
+          <a class="dropdown-item" href="{{route('add_reports2')}}"><i class="fas fa-fw fa-folder"></i>
+            <span>Expense Reports</span></a>
         </div>
       </li>
 

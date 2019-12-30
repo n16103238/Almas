@@ -59,7 +59,7 @@
                                   </div>
                                   <div class="form-group">
                                       <label>Expiry Date</label>
-                                      <input type="date" class="form-control" name="expiry_date">
+                                      <input type="date" class="form-control" value="12/30/2019" min="12/30/2019" name="expiry_date">
                                   </div>
 
                                     <button type="submit" name="submit" class="btn btn-info"> Submit</button>

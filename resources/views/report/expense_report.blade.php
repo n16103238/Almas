@@ -6,14 +6,14 @@
             <div class="col-auto">
 
               <div class="card">
-                <div  class="card-header text-center">
+                <div class="card-header text-center">
                   <h2>
                       <i class="fa fa-plus-circle"></i>
-                      Sales Report
+                      Expense Report
                   </h2>
                 </div>
                 <div class="card-body">
-                                  <form class="form-inline justify-content-center"  action="{{ route('create_reports') }}" method="POST">
+                                  <form class="form-inline justify-content-center"  action="{{ route('create_reports2') }}" method="POST">
                                       @csrf
                                         <div class="form-group">
                                         <label >From:</label>
@@ -28,38 +28,29 @@
                                 </div>
                         </div>
                     </div>
-                    <?php $s_total = 0; ?>
+                    <?php $a_total = 0; ?>
                     @if(isset($reports))
                     <div class="card-body" id="toPrint">
-                      <center><h5><b>Sanaz Pharmacy</b></h5></center>
-                      
                       <table class="table table-striped">
                         <thead class="bg-dark text-light text-center">
                           <tr>
-                            <th>Order ID</th>
-                            <th>Customer Name</th>
-                            <th>Phone Number</th>
-                            <th>Sub Total</th>
+                            <th>Expense Name</th>
+                            <th>Amount</th>
                             <th>Date</th>
                           </tr>
                         </thead>
                         <tbody class="text-center">
                           @foreach($reports as $report)
                           <tr>
-                            <td>{{$report->id}}</td>
-                            <td>{{$report->customer_name}}</td>
-                            <td>{{$report->phone}}</td>
-                            <td>{{$report->sub_total}}</td>
-                            <?php $s_total = $s_total + ($report->sub_total) ?>
+                            <td>{{$report->name}}</td>
+                            <td>{{$report->amount}}</td>
+                            <?php $a_total = $a_total + ($report->amount) ?>
                             <td>{{$report->updated_at->toDateString()}}</td>
-
                             </tr>
                           @endforeach
                           <tr>
-                            <td></td>
-                            <td></td>
-                            <td><b>Sub Total:</b></td>
-                            <td>{{$s_total}}</td>
+                            <td><b>Total:</b></td>
+                            <td>{{$a_total}}</td>
                             <td></td>
                           </tr>
                         </tbody>

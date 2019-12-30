@@ -17,12 +17,12 @@
                                       @csrf
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Name</label>
-                                            <input type="text" class="form-control" name="name" >
+                                            <input type="text" class="form-control" name="name" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Phone Number</label>
-                                            <input type="number" class="form-control" placeholder="01......" maxlength="11"
-                                             name="phone" >
+                                            <input type="phoneInput" class="form-control" placeholder="01......" maxlength="11"
+                                             name="phone" required >
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Position</label>
@@ -30,7 +30,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Salary</label>
-                                            <input type="text" class="form-control" name="salary" >
+                                            <input type="number" min="0" class="form-control" name="salary" required>
                                         </div>
                                         <div class="form-group">
                                             <label>Gender</label>

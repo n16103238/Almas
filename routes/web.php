@@ -85,10 +85,18 @@ Route::post('/update_staff/{id}', 'StaffController@update')->name('update.staff'
 Route::post('/delete_staff', 'StaffController@delete')->name('delete.staff');
 
 
-//Report
+//Reports---Sales----!
 Route::get('/reports', 'ReportController@reports')->name('reports');
 Route::get('/add_reports', 'ReportController@add_reports')->name('add_reports');
 Route::post('/create_reports', 'ReportController@create_reports')->name('create_reports');
+//Reports---Sales Details----!
+Route::get('/details', 'ReportController@details')->name('details');
+Route::get('/add_reports_details', 'ReportController@add_reports_details')->name('add_reports_details');
+Route::post('/create_reports_details', 'ReportController@create_reports_details')->name('create_reports_details');
+//Reports---Expense----!
+Route::get('/reports2', 'ReportController@reports2')->name('reports2');
+Route::get('/add_reports2', 'ReportController@add_reports2')->name('add_reports2');
+Route::post('/create_reports2', 'ReportController@create_reports2')->name('create_reports2');
 
 
 //Profiles

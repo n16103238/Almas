@@ -17,7 +17,7 @@
 
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-    <a class="navbar-brand mr-1" href="index.html">Pharmacist</a>
+    <a class="navbar-brand mr-1" href="">Pharmacist</a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       <i class="fas fa-bars"></i>
@@ -93,27 +93,7 @@
     <a class="nav-link" href="{{route('stock')}}"><i class="fas fa-fw fa-chart-area"></i><span>Stock</span></a>
   </li>
 
-      <!-- All Sales -->
-            <li class="nav-item">
-              <a class="nav-link" href=""><i class="fas fa-cart-plus"></i>
-                <span>All Sales</span></a>
-            </li>
 
-      <!-- Report -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-fw fas fa-chart-line"></i>
-                <span>Report</span>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i>
-                  <span>Sales Report</span></a>
-                <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i>
-                  <span>Purchase Report</span></a>
-                <a class="dropdown-item" href=""><i class="fas fa-fw fa-folder"></i>
-                  <span>Profit/Loss</span></a>
-              </div>
-            </li>
     <!-- Profile -->
 
                 <li class="nav-item">
@@ -173,7 +153,6 @@
 
   <!-- Custom scripts for all pages-->
   <script src="{{ asset('dashboard/js/admin.min.js') }}" defer></script>
-
 
 </body>
 

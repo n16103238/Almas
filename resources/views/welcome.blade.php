@@ -13,9 +13,13 @@
         <style>
             html, body {
                 background-color: #fff;
-                color: #636b6f;
+                background-image: url('https://ftp.cnc3.co.tt/sites/default/files/pharmacy%20still.jpg');
+                background-repeat: no-repeat;
+                background-size: 1400px 720px;
+                color: #ffff;
+                text-shadow: 3px 2px black;
                 font-family: 'Nunito', sans-serif;
-                font-weight: 200;
+                font-weight: 500;
                 height: 100vh;
                 margin: 0;
             }
@@ -49,7 +53,7 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: #ffff;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -65,30 +69,14 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
             <div class="content">
                 <div class="title m-b-md">
                     Pharmacy Management System
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="{{ route('login') }}">Login</a>
+                    <a href="{{ route('register') }}">Register</a>
                 </div>
             </div>
         </div>
